@@ -1,0 +1,45 @@
+.logo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    img{
+        height: 50px;
+        border-radius: 8px;
+    }
+}
+
+
+@media(min-width:576px){
+    .logo{
+        width: 120px;
+        order: 1;
+        img{
+            height: 69px;
+        }
+    }
+}  
+
+@media(min-width:768px){
+    .logo{
+        padding-right: 50px;
+        img{
+            height: 90px;
+        }
+    }
+}
+
+@media(min-width:992px){
+    .logo{
+        padding-right: 140px;
+        img{
+            height: 100px;
+        }
+    }
+}
+
+@media(min-width:1200px){
+    .logo{
+        padding-right: 160px;
+        
+    }
+}

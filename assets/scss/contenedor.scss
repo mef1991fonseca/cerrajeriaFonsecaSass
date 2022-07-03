@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    /*font-family: 'Dancing Script', cursive;*/
+    font-family: 'Patrick Hand', cursive;
+    /*font-family: 'Play', sans-serif;*/
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "navbar"
+                         "main"
+                         "footer";
+}

@@ -1,0 +1,49 @@
+.imgBanner{
+    width: 100%;
+    background-size: cover;
+}
+
+.mainProductos{
+    grid-area: main;
+    width: 100%;
+    margin-top: 10px;
+    .cards{
+        display: flex;
+        flex-wrap: wrap;/*Para poder usar wrap debo definir un ancho en los hijos*/
+        justify-content: space-around;
+        .card{
+            display: flex;
+            margin: 5px;
+            width: 270px;
+            height: 150px;
+            border: 2px solid $color2;
+            border-radius: 10px;
+            padding: 6px 0 0 5px;
+            div{
+                margin: 5px;
+                .info__btn{
+                    background-color: $color2;
+                    border: 0;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    color: white;
+                    margin: 10px;
+                    &:hover{
+                        background-color: $color3;
+                    }
+                }
+            }
+            img{
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
