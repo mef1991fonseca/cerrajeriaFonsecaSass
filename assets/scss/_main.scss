@@ -3,17 +3,24 @@
     background-size: cover;
 }
 
+
+@mixin propiedadesFlex($display,$wrap,$direccion,$justify,$align,$margin) {
+    display: $display;
+    flex-wrap: $wrap;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+    margin: $margin
+}
+
 .mainProductos{
     grid-area: main;
     width: 100%;
     margin-top: 10px;
     .cards{
-        display: flex;
-        flex-wrap: wrap;/*Para poder usar wrap debo definir un ancho en los hijos*/
-        justify-content: space-around;
+        @include propiedadesFlex(flex, wrap, row, space-around, center, 2px);
         .card{
-            display: flex;
-            margin: 5px;
+            @include propiedadesFlex(flex, nowrap, row, center, end, 5px);
             width: 270px;
             height: 150px;
             border: 2px solid $color2;
@@ -22,12 +29,7 @@
             div{
                 margin: 5px;
                 .info__btn{
-                    background-color: $color2;
-                    border: 0;
-                    padding: 10px 20px;
-                    border-radius: 10px;
-                    color: white;
-                    margin: 10px;
+                    @extend .btn;
                     &:hover{
                         background-color: $color3;
                     }

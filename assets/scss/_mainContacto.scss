@@ -24,13 +24,13 @@
             width: 200px;
         }
         .btn{
-            background-color: $color2;
-            border: 0;
-            padding: 10px 20px;
-            border-radius: 10px;
-            color: white;
-            margin: 10px;
-            width: 150px;
+            background-color: map-get($boton , relleno );
+            border: map-get($boton, border);
+            padding: map-get($boton, padding );
+            border-radius: map-get($boton , borderRadius);
+            color: map-get($boton, color );
+            margin: map-get($boton, margen);
+            width: map-get($boton, ancho);
             &:hover{
                 background-color: $color3;
             }

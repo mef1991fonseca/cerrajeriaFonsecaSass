@@ -203,10 +203,16 @@
   .mainProductos .cards {
     display: flex;
     flex-wrap: wrap;
-    /*Para poder usar wrap debo definir un ancho en los hijos*/
-    justify-content: space-around; }
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2px; }
     .mainProductos .cards .card {
       display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: end;
       margin: 5px;
       width: 270px;
       height: 150px;
@@ -215,15 +221,8 @@
       padding: 6px 0 0 5px; }
       .mainProductos .cards .card div {
         margin: 5px; }
-        .mainProductos .cards .card div .info__btn {
-          background-color: #5bdaaf;
-          border: 0;
-          padding: 10px 20px;
-          border-radius: 10px;
-          color: white;
-          margin: 10px; }
-          .mainProductos .cards .card div .info__btn:hover {
-            background-color: #e9fa2e; }
+        .mainProductos .cards .card div .info__btn:hover {
+          background-color: #e9fa2e; }
       .mainProductos .cards .card img {
         width: 130px;
         height: 130px; }
@@ -313,15 +312,15 @@
     .mainContacto .contacto textarea {
       margin-bottom: 15px;
       width: 200px; }
-    .mainContacto .contacto .btn {
+    .mainContacto .contacto .btn, .mainContacto .contacto .mainProductos .cards .card div .info__btn, .mainProductos .cards .card div .mainContacto .contacto .info__btn {
       background-color: #5bdaaf;
       border: 0;
       padding: 10px 20px;
       border-radius: 10px;
-      color: white;
+      color: #fff;
       margin: 10px;
       width: 150px; }
-      .mainContacto .contacto .btn:hover {
+      .mainContacto .contacto .btn:hover, .mainContacto .contacto .mainProductos .cards .card div .info__btn:hover, .mainProductos .cards .card div .mainContacto .contacto .info__btn:hover {
         background-color: #e9fa2e; }
   .mainContacto .ubicacion {
     display: flex;
@@ -337,7 +336,7 @@
       width: 220px; }
     .contacto textarea {
       width: 220px; }
-    .contacto .btn {
+    .contacto .btn, .contacto .mainProductos .cards .card div .info__btn, .mainProductos .cards .card div .contacto .info__btn {
       width: 180px; }
     .contacto .ubicacion iframe {
       width: 500px; } }
@@ -357,7 +356,7 @@
       width: 260px; }
     .mainContacto .contacto textarea {
       width: 260px; }
-    .mainContacto .contacto .btn {
+    .mainContacto .contacto .btn, .mainContacto .contacto .mainProductos .cards .card div .info__btn, .mainProductos .cards .card div .mainContacto .contacto .info__btn {
       width: 200px; }
   .ubicacion iframe {
     width: 550px; } }
